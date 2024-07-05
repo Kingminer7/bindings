@@ -2718,7 +2718,7 @@ class DailyLevelNode : cocos2d::CCNode, FLAlertLayerProtocol {
 class DailyLevelPage : FLAlertLayer, FLAlertLayerProtocol, GJDailyLevelDelegate, LevelDownloadDelegate {
 	// virtual ~DailyLevelPage();
 
-	static DailyLevelPage* create(GJTimedLevelType) = win 0xcb380;
+	static DailyLevelPage* create(GJTimedLevelType) = win 0xcb380, m1 0x1d91d8, imac 0x22ba40;
 
 	TodoReturn claimLevelReward(DailyLevelNode*, GJGameLevel*, cocos2d::CCPoint);
 	TodoReturn createDailyNode(GJGameLevel*, bool, float, bool) = win 0xcd130;
@@ -2729,7 +2729,7 @@ class DailyLevelPage : FLAlertLayer, FLAlertLayerProtocol, GJDailyLevelDelegate,
 	TodoReturn getDailyTimeString(int) = win 0xcd4f0;
 	bool init(GJTimedLevelType) = win 0xcb4c0, imac 0x22bbd0, m1 0x1d930c;
 	void onClose(cocos2d::CCObject* sender);
-	void onTheSafe(cocos2d::CCObject* sender) = win 0xce960;
+	void onTheSafe(cocos2d::CCObject* sender) = win 0xce960, m1 0x1da254, imac 0x22c840;
 	TodoReturn refreshDailyPage();
 	TodoReturn skipDailyLevel(DailyLevelNode*, GJGameLevel*);
 	TodoReturn tryGetDailyStatus() = win 0xccf00;
