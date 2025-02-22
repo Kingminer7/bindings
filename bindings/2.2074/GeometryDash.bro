@@ -2420,6 +2420,86 @@ class CharacterColorPage : FLAlertLayer {
     cocos2d::CCLabelBMFont* m_glowLabel;
 }
 
+[[link(win, android, mac)]]
+class FMOD::ChannelControl {
+    ChannelControl();
+    ChannelControl(const ChannelControl &);
+
+    FMOD_RESULT getSystemObject(System** system);
+
+    // General control functionality for Channels and ChannelGroups.
+    FMOD_RESULT stop();
+    FMOD_RESULT setPaused(bool paused) = ios 0x4fabf4;
+    FMOD_RESULT getPaused(bool* paused);
+    FMOD_RESULT setVolume(float volume);
+    FMOD_RESULT getVolume(float* volume);
+    FMOD_RESULT setVolumeRamp(bool ramp);
+    FMOD_RESULT getVolumeRamp(bool* ramp);
+    FMOD_RESULT getAudibility(float* audibility);
+    FMOD_RESULT setPitch(float pitch);
+    FMOD_RESULT getPitch(float* pitch);
+    FMOD_RESULT setMute(bool mute);
+    FMOD_RESULT getMute(bool* mute);
+    FMOD_RESULT setReverbProperties(int instance, float wet);
+    FMOD_RESULT getReverbProperties(int instance, float* wet);
+    FMOD_RESULT setLowPassGain(float gain);
+    FMOD_RESULT getLowPassGain(float* gain);
+    FMOD_RESULT setMode(FMOD_MODE mode);
+    FMOD_RESULT getMode(FMOD_MODE* mode);
+    FMOD_RESULT setCallback(FMOD_CHANNELCONTROL_CALLBACK callback);
+    FMOD_RESULT isPlaying(bool* isplaying);
+
+    // Panning and level adjustment.
+    FMOD_RESULT setPan(float pan);
+    FMOD_RESULT setMixLevelsOutput(float frontleft, float frontright, float center, float lfe, float surroundleft, float surroundright, float backleft, float backright);
+    FMOD_RESULT setMixLevelsInput(float* levels, int numlevels);
+    FMOD_RESULT setMixMatrix(float* matrix, int outchannels, int inchannels, int inchannel_hop);
+    FMOD_RESULT getMixMatrix(float* matrix, int* outchannels, int* inchannels, int inchannel_hop);
+
+    // Clock based functionality.
+    FMOD_RESULT getDSPClock(uint64_t* dspclock, uint64_t* parentclock);
+    FMOD_RESULT setDelay(uint64_t dspclock_start, uint64_t dspclock_end, bool stopchannels);
+    FMOD_RESULT getDelay(uint64_t* dspclock_start, uint64_t* dspclock_end, bool* stopchannels);
+    FMOD_RESULT addFadePoint(uint64_t dspclock, float volume);
+    FMOD_RESULT setFadePointRamp(uint64_t dspclock, float volume);
+    FMOD_RESULT removeFadePoints(uint64_t dspclock_start, uint64_t dspclock_end);
+    FMOD_RESULT getFadePoints(unsigned int* numpoints, uint64_t* point_dspclock, float* point_volume);
+
+    // DSP effects.
+    FMOD_RESULT getDSP(int index, DSP** dsp);
+    FMOD_RESULT addDSP(int index, DSP* dsp);
+    FMOD_RESULT removeDSP(DSP* dsp);
+    FMOD_RESULT getNumDSPs(int* numdsps);
+    FMOD_RESULT setDSPIndex(DSP* dsp, int index);
+    FMOD_RESULT getDSPIndex(DSP* dsp, int* index);
+
+    // 3D functionality.
+    FMOD_RESULT set3DAttributes(const FMOD_VECTOR* pos, const FMOD_VECTOR* vel);
+    FMOD_RESULT get3DAttributes(FMOD_VECTOR* pos, FMOD_VECTOR* vel);
+    FMOD_RESULT set3DMinMaxDistance(float mindistance, float maxdistance);
+    FMOD_RESULT get3DMinMaxDistance(float* mindistance, float* maxdistance);
+    FMOD_RESULT set3DConeSettings(float insideconeangle, float outsideconeangle, float outsidevolume);
+    FMOD_RESULT get3DConeSettings(float* insideconeangle, float* outsideconeangle, float* outsidevolume);
+    FMOD_RESULT set3DConeOrientation(FMOD_VECTOR* orientation);
+    FMOD_RESULT get3DConeOrientation(FMOD_VECTOR* orientation);
+    FMOD_RESULT set3DCustomRolloff(FMOD_VECTOR* points, int numpoints);
+    FMOD_RESULT get3DCustomRolloff(FMOD_VECTOR** points, int* numpoints);
+    FMOD_RESULT set3DOcclusion(float directocclusion, float reverbocclusion);
+    FMOD_RESULT get3DOcclusion(float* directocclusion, float* reverbocclusion);
+    FMOD_RESULT set3DSpread(float angle);
+    FMOD_RESULT get3DSpread(float* angle);
+    FMOD_RESULT set3DLevel(float level);
+    FMOD_RESULT get3DLevel(float* level);
+    FMOD_RESULT set3DDopplerLevel(float level);
+    FMOD_RESULT get3DDopplerLevel(float* level);
+    FMOD_RESULT set3DDistanceFilter(bool custom, float customLevel, float centerFreq);
+    FMOD_RESULT get3DDistanceFilter(bool* custom, float* customLevel, float* centerFreq);
+
+    // Userdata set/get.
+    FMOD_RESULT setUserData(void* userdata);
+    FMOD_RESULT getUserData(void** userdata);
+}
+
 [[link(android)]]
 class CheckpointGameObject : EffectGameObject {
     // virtual ~CheckpointGameObject();
