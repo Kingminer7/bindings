@@ -8464,7 +8464,7 @@ class GauntletSelectLayer : cocos2d::CCLayer, BoomScrollLayerDelegate, LevelMana
     // virtual ~GauntletSelectLayer();
     GauntletSelectLayer() {}
 
-    static GauntletSelectLayer* create(int p0) = win inline, imac 0x55abc0, m1 0x4b1248 {
+    static GauntletSelectLayer* create(int p0) = win inline, imac 0x55abc0, m1 0x4b1248, ios 0x1c0448 {
         auto ret = new GauntletSelectLayer();
         if (ret->init(p0)) {
             ret->autorelease();
@@ -8473,11 +8473,11 @@ class GauntletSelectLayer : cocos2d::CCLayer, BoomScrollLayerDelegate, LevelMana
         delete ret;
         return nullptr;
     }
-    static cocos2d::CCScene* scene(int) = win 0x1f5570, imac 0x55aaa0, m1 0x4b1168;
+    static cocos2d::CCScene* scene(int) = win 0x1f5570, imac 0x55aaa0, m1 0x4b1168, ios 0x1c03fc;
 
     void goToPage(int, bool) = win 0x1f6f20, m1 0x4b2c08, imac 0x55c750;
     bool init(int) = win 0x1f56a0, m1 0x4b1310, imac 0x55acb0, ios 0x1c0504;
-    void onBack(cocos2d::CCObject* sender) = win 0x1f70d0, imac 0x55b7c0, m1 0x4b1d5c;
+    void onBack(cocos2d::CCObject* sender) = win 0x1f70d0, imac 0x55b7c0, m1 0x4b1d5c, ios 0x1c0f30;
     void onInfo(cocos2d::CCObject* sender) = win 0x1f6210, m1 0x4b1dd0, imac 0x55b830;
     void onNext(cocos2d::CCObject* sender) = win 0x1f6ee0, imac 0x55b7a0, m1 0x4b1d48;
     void onPlay(cocos2d::CCObject* sender) = win 0x1f7190, imac 0x55c2d0, m1 0x4b27b8;
@@ -13615,7 +13615,7 @@ class LeaderboardsLayer : cocos2d::CCLayer, LeaderboardManagerDelegate, FLAlertL
         delete ret;
         return nullptr;
     }
-    static cocos2d::CCScene* scene(LeaderboardState state) = win inline, m1 0x45be78, imac 0x4fc270 {
+    static cocos2d::CCScene* scene(LeaderboardState state) = win inline, m1 0x45be78, imac 0x4fc270, ios 0x3a90dc {
         auto scene = cocos2d::CCScene::create();
         auto layer = LeaderboardsLayer::create(state);
         scene->addChild(layer);
@@ -14583,7 +14583,7 @@ class LevelSearchLayer : cocos2d::CCLayer, TextInputDelegate, FLAlertLayerProtoc
     // virtual ~LevelSearchLayer();
 
     static LevelSearchLayer* create(int) = imac 0x610ff0, m1 0x53d2e0, ios 0x54d78, m1 0x53d2e0;
-    static cocos2d::CCScene* scene(int) = win 0x2f75f0, m1 0x53d1e8, imac 0x610eb0, m1 0x53d1e8, imac 0x610eb0;
+    static cocos2d::CCScene* scene(int) = win 0x2f75f0, m1 0x53d1e8, imac 0x610eb0, m1 0x53d1e8, imac 0x610eb0, ios 0x54d2c;
 
     virtual void keyBackClicked() = win 0x2fdcc0, m1 0x542290, imac 0x615fa0, ios 0x588e4;
     virtual void textInputOpened(CCTextInputNode*) = win 0x2fad00, m1 0x5417d0, imac 0x6154f0, ios 0x58198;
