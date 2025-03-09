@@ -640,8 +640,8 @@ class cocos2d::CCMotionStreak : cocos2d::CCNodeRGBA, cocos2d::CCTextureProtocol 
     static cocos2d::CCMotionStreak* create(float, float, float, cocos2d::_ccColor3B const&, cocos2d::CCTexture2D*) = imac 0x55f3e0, ios 0x17a2c0;
     static cocos2d::CCMotionStreak* create(float, float, float, cocos2d::_ccColor3B const&, char const*) = imac 0x55f3e0, ios 0x17a1b8;
 
-    bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, cocos2d::CCTexture2D*) = imac 0x55f6e0, m1 0x4b6180;
-    bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, char const*) = imac 0x55f530, m1 0x4b5ffc;
+    bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, cocos2d::CCTexture2D*) = imac 0x55f6e0, m1 0x4b6180, ios 0x17a350;
+    bool initWithFade(float, float, float, cocos2d::_ccColor3B const&, char const*) = imac 0x55f530, m1 0x4b5ffc, ios 0x17a248;
 
     bool getDontOpacityFade() const;
     float getM_fMaxSeg() const {
@@ -4137,7 +4137,7 @@ class cocos2d {
     static float ccpLength(cocos2d::CCPoint const&);
     static cocos2d::CCPoint ccpLerp(cocos2d::CCPoint const&, cocos2d::CCPoint const&, float);
     static bool ccpLineIntersect(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, float*, float*);
-    static cocos2d::CCPoint ccpNormalize(cocos2d::CCPoint const&) = imac 0x3428c0, ios 0x1b1e1c;
+    static cocos2d::CCPoint ccpNormalize(cocos2d::CCPoint const&) = imac 0x3428c0, m1 0x2d82a8, ios 0x1b1e1c;
     static cocos2d::CCPoint ccpRotateByAngle(cocos2d::CCPoint const&, cocos2d::CCPoint const&, float);
     static bool ccpSegmentIntersect(cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&, cocos2d::CCPoint const&);
     static float ccpToAngle(cocos2d::CCPoint const&);
