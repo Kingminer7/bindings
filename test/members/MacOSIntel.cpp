@@ -204,4 +204,6 @@ GEODE_SIZE_CHECK(GJOptionsLayer, 0x3f0);
 GEODE_MEMBER_CHECK(DrawGridLayer, m_editorLayer, 0x1f0);
 GEODE_MEMBER_CHECK(DrawGridLayer, m_gridSize, 0x25c);
 
+GEODE_SIZE_CHECK(GameLevelManager, 0x3b0)
+
 #endif

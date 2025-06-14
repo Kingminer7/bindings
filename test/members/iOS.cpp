@@ -66,4 +66,6 @@ GEODE_SIZE_CHECK(CCLightStrip, 0x160);
 GEODE_SIZE_CHECK(SetupTriggerPopup, 0x3b0);
 GEODE_SIZE_CHECK(GJOptionsLayer, 0x3f0);
 
+GEODE_SIZE_CHECK(GameLevelManager, 0x3b0)
+
 #endif

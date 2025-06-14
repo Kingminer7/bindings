@@ -1114,4 +1114,6 @@ GEODE_MEMBER_CHECK(LevelAreaInnerLayer, m_exiting, 0x1b0);
 GEODE_MEMBER_CHECK(CountTriggerGameObject, m_pickupTriggerMode, 0x744);
 GEODE_MEMBER_CHECK(SetupInstantCountPopup, m_itemID, 0x3c0);
 
+GEODE_SIZE_CHECK(GameLevelManager, 0x3b8)
+
 #endif

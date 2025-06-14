@@ -1082,4 +1082,6 @@ GEODE_MEMBER_CHECK(CheckpointObject, m_unk11e8, 0x11e8);
 GEODE_MEMBER_CHECK(CheckpointObject, m_sequenceTriggerStateUnorderedMap, 0x11f0);
 GEODE_MEMBER_CHECK(CheckpointObject, m_commandIndex, 0x1228);
 
+GEODE_SIZE_CHECK(GameLevelManager, 0x3b0)
+
 #endif
